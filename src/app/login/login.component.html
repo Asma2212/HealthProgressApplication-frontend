@@ -3,7 +3,7 @@
 <div class="container">
 
 <section>
-
+<!--
   <div class="uk-position-small uk-position-center uk-overlay uk-overlay-default">
     <h2 >Log to our page</h2>
     <form #loginform ="ngForm" (ngSubmit) = "loginPatient()">
@@ -12,21 +12,46 @@
             <div class="uk-inline">
                 <span class="uk-form-icon" uk-icon="icon: user"></span>
                 <input class="uk-input" type="email" name="email" [(ngModel)] = "patient.email" required #email="ngModel" [class.is.invalid]="email.invalid && email.touched">
-               
+
             </div>
         </div>
-  
+
         <div class="uk-margin">
             <div class="uk-inline">
                 <span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: lock"></span>
                 <input class="uk-input" type="password" name="password" [(ngModel)] = "patient.password" required #password="ngModel" [class.is.invalid]="password.invalid && password.touched">
-               
+
               </div>
         </div>
       <button type="submit" class="btn btn-success" style="width: 100%;">Login</button><br><br>
       <button type="submit" class="btn btn-danger" style="width: 100%;">Forget password</button>
 
     </form>
+</div>
+ [(ngModel)] = "patient.email" required #email="ngModel"
+   [(ngModel)] = "patient.password" required #password="ngModel"
+   (ngSubmit) = "loginPatient()"
+-->
+<h2>Login Page</h2>
+<div class="row" >
+  <div class="col-md-6 col-md-offset-3">
+    <form  #loginform ="ngForm" [formGroup]="form" (validSubmit)="loginPatient()">
+      <div class="form-group">
+        <label class="control-label">Email</label>
+        <input type="text" class="form-control" formControlName="Email">
+      </div>
+      <div class="form-group">
+        <label class="control-label">Password</label>
+        <input type="password" class="form-control" formControlName="Password">
+      </div>
+
+      <button type="submit" class="btn btn-success" style="width: 100%;">Submit</button> <br><br>
+      <button type="submit" class="btn btn-danger" style="width: 100%;">Forget password</button>
+
+    </form>
+  </div>
+
+
 </div>
 </section>
 
