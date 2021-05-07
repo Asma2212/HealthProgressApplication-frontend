@@ -9,7 +9,8 @@ import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { ProfilComponent } from './profil/profil.component';
 import { LogoutComponent } from './logout/logout.component';
-import {FormsModule} from '@angular/forms';
+import { NgBootstrapFormValidationModule } from 'ng-bootstrap-form-validation';
+import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FooterComponent } from './footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
@@ -30,7 +31,9 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    ReactiveFormsModule,
+    NgBootstrapFormValidationModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
