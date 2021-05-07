@@ -1,0 +1,35 @@
+<body>
+
+<div class="container">
+
+<section>
+
+  <div class="uk-position-small uk-position-center uk-overlay uk-overlay-default">
+    <h2 >Log to our page</h2>
+    <form #loginform ="ngForm" (ngSubmit) = "loginPatient()">
+        <small class="text-danger"> {{msg}} </small>
+        <div class="uk-margin">
+            <div class="uk-inline">
+                <span class="uk-form-icon" uk-icon="icon: user"></span>
+                <input class="uk-input" type="email" name="email" [(ngModel)] = "patient.email" required #email="ngModel" [class.is.invalid]="email.invalid && email.touched">
+               
+            </div>
+        </div>
+  
+        <div class="uk-margin">
+            <div class="uk-inline">
+                <span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: lock"></span>
+                <input class="uk-input" type="password" name="password" [(ngModel)] = "patient.password" required #password="ngModel" [class.is.invalid]="password.invalid && password.touched">
+               
+              </div>
+        </div>
+      <button type="submit" class="btn btn-success" style="width: 100%;">Login</button><br><br>
+      <button type="submit" class="btn btn-danger" style="width: 100%;">Forget password</button>
+
+    </form>
+</div>
+</section>
+
+</div>
+
+</body>

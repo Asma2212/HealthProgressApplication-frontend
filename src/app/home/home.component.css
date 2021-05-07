@@ -1,0 +1,54 @@
+/*body {
+  height: 600vh;
+
+  background-image: linear-gradient(
+    0deg,
+    rgb(176, 207, 255),
+    rgb(92, 104, 168)
+  );
+}*/
+.button {
+  background-color: rgba(253, 115, 207, 0.871);
+  border: none;
+  color: whitesmoke;
+  padding: 15px;
+  text-align: right;
+  display: inline-block;
+  font-size: 16px;
+  font-family: Viner Hand ITC;
+  border-radius: 4rem;
+  position: relative;
+  left: 23%;
+}
+/*h1 {
+  position: relative;
+  left: 4%;
+}*/
+h3 {
+  font-family: "Lato", sans-serif;
+}
+body {
+  font-family: "Lato", sans-serif;
+  padding-bottom: 50px;
+}
+.wrapper {
+  padding-top: 100px;
+}
+.card-img-top {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+.card-body {
+  text-align: center;
+
+  box-shadow: 0px 15px 15px -8px rgba(0, 0, 0, 0.5);
+}
+.card-body h6 {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: deeppink;
+}
+.card-title {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 24px;
+}

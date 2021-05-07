@@ -1,0 +1,51 @@
+<body>
+
+<div class="uk-position-small uk-position-center uk-overlay uk-overlay-default">
+
+  <form #f="ngForm" (ngSubmit)="register(f)">
+    <div class="uk-margin">
+      <div class="uk-inline">
+          <span class="uk-form-icon" uk-icon="icon: user" ></span>
+          <input class="uk-input" type="text" name="Flname" #Flname="ngModel" ngModel required>
+
+            <p  class="alert alert-danger"  *ngIf="Flname.errors?.required  && Flname.touched">name required</p>
+
+      </div>
+  </div>
+    <div class="uk-margin">
+        <div class="uk-inline">
+            <span class="uk-form-icon" uk-icon="icon: mail"></span>
+            <input class="uk-input" type="email" name="mail" #mail="ngModel" ngModel email required>
+
+              <p  class="alert alert-danger" *ngIf="mail.errors?.required && mail.touched">you should enter your e-mail </p>
+              <p  class="alert alert-danger" *ngIf="mail.errors?.email && mail.touched"> write an email please, exemple:foulen@gmail</p>
+
+        </div>
+    </div>
+
+    <div class="uk-margin">
+      <div class="uk-inline">
+            <span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: lock"></span>
+            <input class="uk-input" type="password" name="password" #password="ngModel" ngModel required minlength="8">
+
+              <p  class="alert alert-danger" *ngIf="password.errors?.required && password.touched">* write a password please</p>
+              <p  class="alert alert-danger" *ngIf="password.errors?.minlength && password.touched">* should be at least 8 caractere</p>
+
+
+          </div>
+        </div>
+
+    <div class="uk-margin">
+      <div class="uk-inline">
+    <input type="password" name="confirm" #confirm="ngModel" ngModel placeholder="Confirm password" required minlength="8">
+    <p  class="alert alert-danger"  *ngIf="confirm.errors?.required && confirm.touched">write the same password please</p>
+    <p  class="alert alert-danger" *ngIf="password.value!==confirm.value && password.touched">not equal </p>
+  </div>
+</div>
+    <button type="submit" class="btn btn-success" style="width: 100%;" [disabled]="f.invalid">Register</button><br><br>
+
+
+  </form>
+</div>
+
+</body>
