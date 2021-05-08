@@ -14,6 +14,8 @@ import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FooterComponent } from './footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginService } from './login.service';
+import { ProfilGuard } from './profil.guard';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,7 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     NgBootstrapFormValidationModule.forRoot(),
   ],
-  providers: [],
+  providers: [LoginService,ProfilGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

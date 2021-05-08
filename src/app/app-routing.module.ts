@@ -5,11 +5,12 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { ProfilGuard } from './profil.guard';
 
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
-  {path:'login',component:LoginComponent},
+  {path:'login',component:LoginComponent , canActivate:[ProfilGuard]},
   {path:'profil',component:ProfilComponent},
   {path:'register',component:RegisterComponent},
   {path:'logout',component:LogoutComponent}];

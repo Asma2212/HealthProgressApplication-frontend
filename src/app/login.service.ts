@@ -9,6 +9,6 @@ export class LoginService {
   constructor() { }
   loggedIn()
   {
-    return Token
+    return !!localStorage.getItem('token')
   }
 }
