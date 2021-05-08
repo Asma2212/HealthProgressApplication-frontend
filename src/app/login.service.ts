@@ -1,3 +1,4 @@
+import { Token } from '@angular/compiler';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -8,6 +9,6 @@ export class LoginService {
   constructor() { }
   loggedIn()
   {
-    return false
+    return Token
   }
 }
