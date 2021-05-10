@@ -36,7 +36,8 @@ msg='';
 this._service.loginPatientFromRemote(this.patient).subscribe(
   data => {
     console.log("response recieved");
-    localStorage.setItem('token',data.token);
+    localStorage.setItem('isConnected', 'true');
+    //localStorage.setItem('token',data.token);
     this._route.navigate(["/profil"])
     
 } ,

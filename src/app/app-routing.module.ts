@@ -10,8 +10,8 @@ import { ProfilGuard } from './profil.guard';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
-  {path:'login',component:LoginComponent , canActivate:[ProfilGuard]},
-  {path:'profil',component:ProfilComponent},
+  {path:'login',component:LoginComponent },
+  {path:'profil',component:ProfilComponent , canActivate:[ProfilGuard]},
   {path:'register',component:RegisterComponent},
   {path:'logout',component:LogoutComponent}];
 
