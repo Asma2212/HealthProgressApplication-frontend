@@ -14,6 +14,8 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
 export class LoginComponent implements OnInit {
 patient = new Patient();
 msg='';
+sessionValue : string ="";
+  localValue : string ="";
   constructor(private _service :RegistrationService, private _route : Router) { }
 
   form: FormGroup;
@@ -30,6 +32,8 @@ msg='';
         Validators.maxLength(20)
       ])
     });
+    localStorage.setItem("FirstName","local -mimi");
+    sessionStorage.setItem("Session ","Session- mimi")
   }
 
   loginPatient(){
@@ -37,9 +41,22 @@ this._service.loginPatientFromRemote(this.patient).subscribe(
   data => {
     console.log("response recieved");
     localStorage.setItem('isConnected', 'true');
-    //localStorage.setItem('token',data.token);
+    console.log(data);
+    localStorage.setItem('token',data.token);
     this._route.navigate(["/profil"])
-    
+    this.sessionValue=sessionStorage.getItem("Second");
+    this.localValue=localStorage.getItem("FirstName");
+    console.log(this.sessionValue);
+    console.log(this.localValue);
+    if(!this.sessionValue )
+    {
+      console.log("session null")
+      return false
+    }
+    else 
+    {
+      return true
+    }
 } ,
 
   error =>
