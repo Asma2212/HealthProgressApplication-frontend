@@ -53,18 +53,18 @@
   <h2>Register Page </h2>
 <div class="row" >
   <div class="col-md-6 col-md-offset-3">
-    <form [formGroup]="form" #f="ngForm" (validSubmit)="register(f)">
+    <form [formGroup]="form" #f="ngForm" (validSubmit)="register()">
       <div class="form-group">
         <label class="control-label">User Name</label>
-        <input type="text" class="form-control" formControlName="User">
+        <input type="text" class="form-control" formControlName="User" [(ngModel)] = "patient.name">
       </div>
       <div class="form-group">
         <label class="control-label">Email</label>
-        <input type="text" class="form-control" formControlName="Email">
+        <input type="text" class="form-control" formControlName="Email" [(ngModel)] = "patient.email">
       </div>
       <div class="form-group">
         <label class="control-label">Password</label>
-        <input type="password" class="form-control" formControlName="Password">
+        <input type="password" class="form-control" formControlName="Password" [(ngModel)] = "patient.password">
       </div>
       <div class="form-group">
         <label class="control-label">Confirm Password</label>

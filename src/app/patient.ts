@@ -1,9 +1,9 @@
 export class Patient {
     id : number;
-    name : String ;
-    email : String ;
-    password : String ;
-    codeP : String ;
+    name : string ;
+    email : string ;
+    password : string ;
+    codeP : string ;
     constructor(){
 
     }

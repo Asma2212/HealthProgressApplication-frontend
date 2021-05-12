@@ -33,16 +33,17 @@ sessionValue : string ="";
       ])
     });
     localStorage.setItem("FirstName","local -mimi");
-    sessionStorage.setItem("Session ","Session- mimi")
+    sessionStorage.setItem("Session ","Session- mimi");
   }
 
-  loginPatient(){
+  loginPatient(email : string ){
 this._service.loginPatientFromRemote(this.patient).subscribe(
   data => {
+    sessionStorage.setItem('email',email);
     console.log("response recieved");
     localStorage.setItem('isConnected', 'true');
     console.log(data);
-    localStorage.setItem('token',data.token);
+  //  localStorage.setItem('token',data.token);
     this._route.navigate(["/profil"])
     this.sessionValue=sessionStorage.getItem("Second");
     this.localValue=localStorage.getItem("FirstName");

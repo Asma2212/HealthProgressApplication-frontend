@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {AbstractControl, FormControl, FormGroup, ValidatorFn, Validators} from "@angular/forms";
+import { Router } from '@angular/router';
+import { Patient } from '../patient';
+import { RegistrationService } from '../registration.service';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
@@ -7,16 +10,15 @@ import {AbstractControl, FormControl, FormGroup, ValidatorFn, Validators} from "
 })
 export class RegisterComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _service :RegistrationService, private _route : Router) { }
 
 
-  register(f){
-console.log(f.value)
-  }
+
 
   RegisterComponent:RegisterComponent;
   form: FormGroup;
-
+  patient = new Patient();
+  msg = '';
   ngOnInit() {
     this.form = new FormGroup({
       User: new FormControl('',
@@ -48,7 +50,19 @@ console.log(f.value)
   onReset() {
     this.form.reset();
   }
-
+  register(){
+    this._service.registerPatientFromRemote(this.patient).subscribe(
+      data => {
+        this._route.navigate(["/login"]);
+    } ,
+    
+      error =>
+       {
+      console.log("exception occured");
+      this.msg="Bad credentials, please enter valid informations";
+    }
+    )
+  }
 
 
 }

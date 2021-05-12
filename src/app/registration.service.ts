@@ -10,9 +10,15 @@ export class RegistrationService {
 
   constructor( private _http : HttpClient) { }
   public loginPatientFromRemote(patient : Patient):Observable<any>{
-return this._http.post<any>("http://localhost:8085/login",patient)
+return this._http.post<any>("http://localhost:8085/login",patient);
   }
-  public getPatient(patient : Patient):Observable<any>{
-    return this._http.post<any>("http://localhost:8085/login",patient)
+  public registerPatientFromRemote(patient : Patient):Observable<any>{
+    return this._http.post<any>("http://localhost:8085/register",patient);
       }
+ /* public getPatient(patient : Patient):Observable<any>{
+    return this._http.get<any>("http://localhost:8085/login",patient)
+      }*/
+      public getPatientByEmail(email : string):Observable<any>{
+        return this._http.get<any>("http://localhost:8085/findE/"+email);
+          }
 }
