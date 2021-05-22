@@ -6,10 +6,12 @@ import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ProfilGuard } from './profil.guard';
+import { QuizComponent } from './quiz/quiz.component';
 
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
+  {path:'quiz',component:QuizComponent},
   {path:'login',component:LoginComponent },
   {path:'profil',component:ProfilComponent , canActivate:[ProfilGuard]},
   {path:'register',component:RegisterComponent},

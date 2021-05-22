@@ -16,6 +16,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginService } from './login.service';
 import { ProfilGuard } from './profil.guard';
+import { QuizComponent } from './quiz/quiz.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { ProfilGuard } from './profil.guard';
     ProfilComponent,
     LogoutComponent,
     FooterComponent,
+    QuizComponent,
   ],
   imports: [
     BrowserModule,
