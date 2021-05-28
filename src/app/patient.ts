@@ -3,7 +3,8 @@ export class Patient {
     name : string ;
     email : string ;
     password : string ;
-    codeP : string ;
+    score : number ;
+    avatar : string ;
     constructor(){
 
     }

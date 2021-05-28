@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {AbstractControl, FormControl, FormGroup, ValidatorFn, Validators} from "@angular/forms";
+import {AbstractControl, FormControl, FormGroup, ReactiveFormsModule, ValidatorFn, Validators} from "@angular/forms";
 import { Router } from '@angular/router';
 import { Patient } from '../patient';
 import { RegistrationService } from '../registration.service';
@@ -51,6 +51,12 @@ export class RegisterComponent implements OnInit {
     this.form.reset();
   }
   register(){
+    //this.patient.name=User;
+    this.patient.email=this.form.get('Email').value;
+    this.patient.password=this.form.get('Password').value;
+    this.patient.name=this.form.get('User').value;
+    this.patient.avatar="";
+    this.patient.score=0;
     this._service.registerPatientFromRemote(this.patient).subscribe(
       data => {
         this._route.navigate(["/login"]);
@@ -59,6 +65,7 @@ export class RegisterComponent implements OnInit {
       error =>
        {
       console.log("exception occured");
+      console.log(this.patient.name);
       this.msg="Bad credentials, please enter valid informations";
     }
     )
