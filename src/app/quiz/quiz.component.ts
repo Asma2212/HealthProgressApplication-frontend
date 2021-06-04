@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Quiz } from '../quiz';
 import { QuizService } from '../quiz.service';
+import { Router } from '@angular/router';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -16,7 +17,7 @@ res=0;
 Dependance :string ='';
 result=false;
 closeResult :string= '';
-  constructor(private quizService: QuizService) { }
+  constructor(private quizService: QuizService,private router: Router) { }
 
   ngOnInit(): void {
     this.quizzes=this.quizService.getQuizzes();
@@ -24,10 +25,10 @@ closeResult :string= '';
   onAnswer(option: number)
 {
   this.answerSelected=true;
-  setTimeout(()=>{
-    this.currentQuiz++;
-    this.answerSelected=false;
-  },5000);
+  
+    //this.currentQuiz++;
+   // this.answerSelected=false;
+  
   this.res=this.res+option;
   if (this.res<=2) 
   {
@@ -53,4 +54,18 @@ showResult()
 {
   this.result=true;
 }
+Suiv ()
+  {
+    if (this.currentQuiz<this.quizzes.length)
+    {
+      this.currentQuiz++;
+      this.answerSelected=false;
+    }
+    else 
+    {
+      this.router.navigateByUrl('/profil');
+    }
+    
+  }
+
 }

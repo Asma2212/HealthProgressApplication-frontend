@@ -12,11 +12,8 @@
                 </li>
             </label>
             </ul>
-           <button *ngIf="currentQuiz+1 == quizzes.length " class="btn btn-success btn-block" (click)="showResult()">Show resulat </button>
-           <h1 *ngIf="result"> resulat final :{{res}}
-           </h1>
-           <h1 *ngIf="result"> votre etat  final :{{Dependance}}
-           </h1>
+           
+           <button  class="btn btn-success btn-block" (click)="Suiv()" [disabled]="!answerSelected" >Suivant  </button><i class="fas fa-angle-double-right"></i>
            
             
         </div> 
