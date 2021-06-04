@@ -27,7 +27,7 @@ closeResult :string= '';
   setTimeout(()=>{
     this.currentQuiz++;
     this.answerSelected=false;
-  },2000);
+  },5000);
   this.res=this.res+option;
   if (this.res<=2) 
   {
