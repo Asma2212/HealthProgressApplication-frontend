@@ -1,79 +1,84 @@
 <div class="container"><h1 style="text-align: center;color:black;font-family:Vladimir Script"><img src="assets/logo.png" alt="" style="width: 100px;height: 100px;"> Hello Admin  Health Progress </h1>  
-    <br>
-    <br>
-    <div class="row">
-        <div class="col-lg-3">
-            <div id="sideBar">
+                 <br>
+                 <br>
+           <div class="row">
+             <div class="col-lg-3">
+                <div id="sideBar">
                 
-                <div class="card" style="width: 18rem; cursor: pointer; margin-left: 60px; " routerLink="/home">
+                    <div class="card" style="width: 18rem; cursor: pointer; margin-left: 60px; " routerLink="/home">
     
-                    <img class="card-img-top img-thumbnail" src="https://upload.wikimedia.org/wikipedia/commons/5/55/User-admin-gear.svg" alt="Card image cap">
-                  </div>
-                  <h3 style="margin: 18px 0 -12px 15px;">Quizz</h3>
-                  <hr>
+                      <img class="card-img-top img-thumbnail" src="https://upload.wikimedia.org/wikipedia/commons/5/55/User-admin-gear.svg" alt="Card image cap">
+                   </div>
+                    <h3 style="margin: 18px 0 -12px 15px;">Quizz</h3>
+                    <hr>
     
-                  <div style="padding: 16px;">
-                      <div class="card" id="theme">
+                       <div style="padding: 16px;">
+                          <div class="card" id="theme">
     
-                        <div class="list-group">
-                            <button type="button" class="list-group-item list-group-item-action active" style="cursor: default;">
-                             Thèmes
-                            </button>
-                            <button type="button" class="list-group-item list-group-item-action active"
-                            style="text-align: center;" >Ajouter un thème</button>
+                            <div class="list-group">
+                              <button type="button" class="list-group-item list-group-item-action active" style="cursor: default;">
+                               Thèmes
+                              </button>
+                              <button type="button" class="list-group-item list-group-item-action active"
+                              style="text-align: center;" >Ajouter un thème</button>
+                            </div>
+    
+    
                           </div>
+                       </div>
     
+                        <h3 style="margin: 18px 0 -12px 15px;">Patients</h3>
+                        <hr>
     
-                        </div>
+                        <div style="padding: 16px;">
+                          <div class="card" id="theme">
+    
+                           <div class="list-group">
+                              <button type="button" class="list-group-item list-group-item-action active" style="cursor: default;">
+                              Les Patients
+                              </button>
+                              <button type="button" class="list-group-item list-group-item-action active"
+                              style="text-align: center;" >Afficher les  patients</button>
+                           </div>
+                         </div>
+                       </div>
+                       <h3 style="margin: 18px 0 -12px 15px;">Medecin</h3>
+                       <hr>
+    
+                         <div style="padding: 16px;">
+                            <div class="card" id="theme">
+    
+                              <div class="list-group">
+                                <button type="button" class="list-group-item list-group-item-action active" style="cursor: default;">
+                                 Les medecin 
+                                </button>
+                                <button type="button" class="list-group-item list-group-item-action active"
+                                style="text-align: center;" >Afficher les medecins </button>
+                              </div>
+                           </div>
+                         </div>
+                         <button type="button" class="btn btn-outline-danger" style="margin-left: 20px;">Deconnecter</button>
+    
+                </div>
+             </div>
+             <div class="col">
+                <div class="pad" style="padding-top: 45%;">
+                  <h3>liste de nos patients</h3>
+                  <div *ngFor="let patient of patients">
+                   <div>{{patient.name}}</div>
                   </div>
-    
-                  <h3 style="margin: 18px 0 -12px 15px;">Patients</h3>
-                  <hr>
-    
-                  <div style="padding: 16px;">
-                      <div class="card" id="theme">
-    
-                        <div class="list-group">
-                            <button type="button" class="list-group-item list-group-item-action active" style="cursor: default;">
-                             Les Patients
-                            </button>
-                            
-    
-                            <button type="button" class="list-group-item list-group-item-action active"
-                            style="text-align: center;" >Afficher les  patients</button>
-                          </div>
-    
-    
-                        </div>
-                  </div>
-                  <h3 style="margin: 18px 0 -12px 15px;">Medecin</h3>
-                  <hr>
-    
-                  <div style="padding: 16px;">
-                      <div class="card" id="theme">
-    
-                        <div class="list-group">
-                            <button type="button" class="list-group-item list-group-item-action active" style="cursor: default;">
-                             Les medecin 
-                            </button>
-                            
-    
-                            <button type="button" class="list-group-item list-group-item-action active"
-                            style="text-align: center;" >Afficher les medecins </button>
-                          </div>
-    
-    
-                        </div>
-                  </div>
-    
-    
-                  <button type="button" class="btn btn-outline-danger" style="margin-left: 20px;">Deconnecter</button>
-    
-            </div>
-        </div>
-        <div class="col-lg-9">
-          <router-outlet></router-outlet>
-        </div>
-    </div>
-    <h1>Nos Patients</h1>
-    </div>
+                </div>
+                
+
+
+
+
+
+
+             </div>
+             <div class="col-lg-9">
+               <router-outlet></router-outlet>
+             </div>
+           </div>
+             
+</div>
