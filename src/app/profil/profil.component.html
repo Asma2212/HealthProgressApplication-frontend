@@ -1,64 +1,67 @@
-<div class="container">
-  <h1 style="font-family:Century Schoolbook ">
-    <img style="width: 70px;height: 70px;" src="assets/prof.PNG" alt="...."> WELCOM {{patient.name}}</h1>
-  <div class="body">
-    <div class="row">
-        <div class="col">
-          <div class="card" style="width: 18rem;">
-            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="assets/yoga.jpg" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="assets/eau.jpg" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img style="width: 350px; height: 170px;" src="assets/music.PNG" alt="...">
+<body>
+  <div class="container">
+    <h1 style="font-family:Century Schoolbook ">
+      <img style="width: 70px;height: 70px;" src="assets/prof.PNG" alt="...."> WELCOM {{patient.name}}</h1>
+    <div class="body">
+      <div class="row">
+          <div class="col">
+            <div class="card" style="width: 18rem;">
+              <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="assets/yoga.jpg" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="assets/eau.jpg" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img style="width: 350px; height: 170px;" src="assets/music.PNG" alt="...">
+                  </div>
                 </div>
               </div>
+              <div class="card-body">
+                <p class="card-text">Vous devez marquer au moin 2 exercice par jour  </p>
+                <button type="button" class="btn btn-info" (click)="show()">start exercices !</button>
+              </div>
             </div>
-            <div class="card-body">
-              <p class="card-text">Vous devez marquer au moin 2 exercice par jour  </p>
-              <button type="button" class="btn btn-info">start exercices !</button>
-            </div>
+  
           </div>
-          
-        </div>
-        <div class="col">
-          <div class="card" style="width: 18rem;">
-            <img src="assets/cal.jpg">
-            <div class="card-body">
-              <p class="card-text">verifier votre etat d'avancement  </p>
-              <button type="button" class="btn btn-info">voir detail !</button>
-            </div>
+          <div class="col">
+            <div class="card" style="width: 18rem;">
+              <img src="assets/cal.jpg">
+              <div class="card-body">
+                <p class="card-text">verifier votre etat d'avancement  </p>
+                <button type="button" class="btn btn-info">voir detail !</button>
+              </div>
+           </div>
          </div>
-       </div>  
-        <div class="card" style="width: 18rem;">
-          <article class="uk-comment">
-            <header class="uk-comment-header">
-                <div class="uk-grid-medium uk-flex-middle" uk-grid>
-                    <div class="uk-width-auto">
-                        <img  style="width: 100px;height: 100px;" class="uk-comment-avatar" src="assets/avatar.jpg" width="80" height="80" alt="">
-                    </div>
-                    <div class="uk-width-expand">
-                        <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">Doctor</a></h4>
-                        <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
-                            <li><a href="#">Mahdi Jwini </a></li>
-                            <li><a href="#">Consulter</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </header>
-            <div class="uk-comment-body">
-              <textarea id="w3review" name="w3review" placeholder="ecrire votre question ici " rows="4" cols="30"></textarea>
-              <button type="button" class="btn btn-info">envoyer</button>
-            </div>
-        </article>
-        </div>
-    </div> 
+          <div class="card" style="width: 18rem;">
+            <article class="uk-comment">
+              <header class="uk-comment-header">
+                  <div class="uk-grid-medium uk-flex-middle" uk-grid>
+                      <div class="uk-width-auto">
+                          <img  style="width: 100px;height: 100px;" class="uk-comment-avatar" src="assets/avatar.jpg" width="80" height="80" alt="">
+                      </div>
+                      <div class="uk-width-expand">
+                          <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">Doctor</a></h4>
+                          <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+                              <li><a href="#">Mahdi Jwini </a></li>
+                              <li><a href="#">Consulter</a></li>
+                          </ul>
+                      </div>
+                  </div>
+              </header>
+              <div class="uk-comment-body">
+                <textarea id="w3review" name="w3review" placeholder="ecrire votre question ici " rows="4" cols="30"></textarea>
+                <button type="button" class="btn btn-info">envoyer</button>
+              </div>
+          </article>
+          </div>
+      </div>
+    </div>
+  
+  <p style="text-align: center;"><img style="width: 400px;" src="assets/positive.jpg" alt="...."><br><h3>Be grateful , Just the process,keep impoving ,Help others </h3> </p>
   </div>
-
-<p style="text-align: center;"><img style="width: 400px;" src="assets/positive.jpg" alt="...."><br><h3>Be grateful , Just the process,keep impoving ,Help others </h3> </p>
-</div>
-
+  
+  
+</body>

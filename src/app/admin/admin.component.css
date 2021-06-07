@@ -1,3 +1,15 @@
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+
+body {
+    min-height: 90vh;
+  
+  }
+  
+  
+=======
+>>>>>>> Stashed changes
 body{margin-top:20px;}
 
 .profile_view {
@@ -84,4 +96,9 @@ body{margin-top:20px;}
 
 .profile_left {
     background: white;
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> c8216a8995b7f3c34b5816c0041662f0deb3ed46
+>>>>>>> Stashed changes

@@ -33,10 +33,13 @@ export class ProfilComponent implements OnInit {
       console.log("response recieved");
       this.name=;
   } ,
-    
-    error => 
+
+    error =>
      {
     console.log("exception occured");
-    
+
 }*/
-}
+show()
+{
+  this._route.navigateByUrl('/exercice');
+}}

@@ -18,6 +18,7 @@ import { LoginService } from './login.service';
 import { ProfilGuard } from './profil.guard';
 import { QuizComponent } from './quiz/quiz.component';
 import { AdminComponent } from './admin/admin.component';
+import { ExerciceComponent } from './exercice/exercice.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { AdminComponent } from './admin/admin.component';
     FooterComponent,
     QuizComponent,
     AdminComponent,
+
   ],
   imports: [
     BrowserModule,
