@@ -1,104 +1,46 @@
-<<<<<<< Updated upstream
-=======
-<<<<<<< HEAD
-
-body {
-    min-height: 90vh;
-  
-  }
-  
-  
-=======
->>>>>>> Stashed changes
-body{margin-top:20px;}
-
-.profile_view {
-    margin-bottom: 20px;
+body{
+    margin-top:20px;
+    background-color: #edf0f0;    
+}
+.btn-primary, 
+.btn-primary:hover, 
+.btn-primary:focus, 
+.btn-primary:active, 
+.btn-primary.active, 
+.btn-primary.focus, 
+.btn-primary:active, 
+.btn-primary:focus, 
+.btn-primary:hover, 
+.open>.dropdown-toggle.btn-primary {
+    background-color: #3bc0c3;
+    border: 1px solid #3bc0c3;
+}
+.p-t-10 {
+    padding-top: 10px !important;
+}
+.media-main a.pull-left {
+    width: 100px;
+}
+.thumb-lg {
+    height: 84px;
+    width: 84px;
+}
+.media-main .info {
+    overflow: hidden;
+    color: #000;
+}
+.media-main .info h4 {
+    padding-top: 10px;
+    margin-bottom: 5px;
+}
+.social-links li a {
+    background: #EFF0F4;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
     display: inline-block;
-    width: 100%;
-        -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2),0 6px 10px 0 rgba(0,0,0,0.3);
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2),0 6px 10px 0 rgba(0,0,0,0.3);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    color: #7A7676;
 }
-.profile_view:hover {
-    -webkit-box-shadow: 0 14px 12px 0 rgba(0,0,0,0.17),0 20px 40px 0 rgba(0,0,0,0.3);
-    box-shadow: 0 14px 12px 0 rgba(0,0,0,0.17),0 20px 40px 0 rgba(0,0,0,0.3);    
-}
-.well.profile_view {
-    padding: 10px 0 0;
-}
-
-.well.profile_view .divider {
-    border-top: 1px solid #e5e5e5;
-    padding-top: 5px;
-    margin-top: 5px;
-}
-
-.well.profile_view .ratings {
-    margin-bottom: 0;
-}
-
-.pagination.pagination-split li {
-    display: inline-block;
-    margin-right: 3px;
-}
-
-.pagination.pagination-split li a {
-    border-radius: 4px;
-    color: #768399;
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
-}
-
-.well.profile_view {
-    background: #fff;
-}
-
-.well.profile_view .bottom {
-    margin-top: -20px;
-    background: #F2F5F7;
-    padding: 9px 0;
-    border-top: 1px solid #E6E9ED;
-}
-
-.well.profile_view .left {
-    margin-top: 20px;
-}
-
-.well.profile_view .left p {
-    margin-bottom: 3px;
-}
-
-.well.profile_view .right {
-    margin-top: 0px;
-    padding: 10px;
-}
-
-.well.profile_view .img-circle {
-    border: 1px solid #E6E9ED;
-    padding: 2px;
-}
-
-.well.profile_view h2 {
-    margin: 5px 0;
-    font-size:14px;
-    font-weight:bold;
-}
-
-.well.profile_view .ratings {
-    text-align: left;
-    font-size: 16px;
-}
-
-.well.profile_view .brief {
-    margin: 0;
-    font-weight: 300;
-}
-
-.profile_left {
-    background: white;
-<<<<<<< Updated upstream
-}
-=======
-}
->>>>>>> c8216a8995b7f3c34b5816c0041662f0deb3ed46
->>>>>>> Stashed changes
