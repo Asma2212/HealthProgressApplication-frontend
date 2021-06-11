@@ -81,7 +81,7 @@
                           </div>
                       </div>
                       <div *ngFor="let patient of patients">
-                        <div>{{patient.name}}</div>
+                        
                       <div class="row" style="padding: 5%;">
                           <div class="col-sm-6">
                               <div class="panel">
@@ -108,7 +108,7 @@
                                       <ul class="social-links list-inline p-b-10">
                                           
                                           <li>
-                                              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Message"><i class="fa fa-envelope-o"></i></a>
+                                              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Message"><i class="fa fa-envelope-o">{{patient.email}}</i></a>
                                           </li>
                                       </ul>
                                   </div>
