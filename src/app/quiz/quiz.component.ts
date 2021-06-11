@@ -3,6 +3,8 @@ import { Quiz } from '../quiz';
 import { QuizService } from '../quiz.service';
 import { Router } from '@angular/router';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+import { RegistrationService } from '../registration.service';
+import { Patient } from '../patient';
 
 @Component({
   selector: 'app-quiz',
@@ -10,14 +12,21 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./quiz.component.css']
 })
 export class QuizComponent implements OnInit {
+  model = {
+    left: true,
+    middle: false,
+    right: false
+  };
+  images = ['http://macfarlaneparkpta.org/index.cfm?a=Files.Serve&File_id=C9B82FD0-41D5-4C06-B08F-CFC0AA2374C5', 'https://wallpapercave.com/wp/wp1828782.jpg'];
 quizzes: Quiz[]=[];
 currentQuiz =0;
 answerSelected=false;
 res=0;
+patient = new Patient();
 Dependance :string ='';
 result=false;
 closeResult :string= '';
-  constructor(private quizService: QuizService,private router: Router) { }
+  constructor(private quizService: QuizService,private router: Router,private _service :RegistrationService) { }
 
   ngOnInit(): void {
     this.quizzes=this.quizService.getQuizzes();
@@ -65,9 +74,15 @@ Suiv ()
     }
     else 
     {
+      /*this._service.updatePatient(this.patient).subscribe(
+        data => {*/
       this.router.navigateByUrl('/profil');
     }
     
+  }
+  Aceuil()
+  {
+    this.router.navigateByUrl('/');
   }
   
 

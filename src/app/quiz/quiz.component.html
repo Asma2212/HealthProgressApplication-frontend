@@ -1,5 +1,28 @@
-<body>
+
     <div class="container" p-5>
+        <header>
+            <h1 style="text-align: center;color:black;font-family:Vladimir Script"><img src="assets/logo.png" alt="" style="width: 100px;height: 100px;"> Health Progress <span style="margin-left: 90%;"><a routerLink="/" class="button">Acceuil</a></span></h1>  </header>
+        
+        <ngb-carousel *ngIf="images">
+            <ng-template ngbSlide>
+              <div class="picsum-img-wrapper">
+                <img [src]="images[0]" style="height:300px;width: 500px;" class="d-block w-100">
+              </div>
+              <div class="carousel-caption">
+          
+           </div>
+           </ng-template>
+            <ng-template ngbSlide>
+              <div class="picsum-img-wrapper">
+                <img [src]="images[1]"style="height:300px;width: 500px;" class="d-block w-100" >
+              </div>
+          
+            </ng-template>
+          
+          </ngb-carousel>
+          <br><br>
+    <h3 style="text-align: center;color:rgb(67, 125, 201);font-family:Vladimir Script"><strong> The following form is required to know your level of addiction in order to help you heal, you must give importance to any questions that arise.</strong></h3>
+    
         <div class="row">
             <div class="col-sm-8 offset-2">
                 <h1>
@@ -18,9 +41,8 @@
                
                 
             </div> 
-    
+             
         </div>
     
     </div>
     
-</body>

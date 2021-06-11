@@ -52,7 +52,7 @@ export class RegisterComponent implements OnInit {
   onReset() {
     this.form.reset();
   }
-  register(){
+  register(email : string){
     //this.patient.name=User;
     this.patient.email=this.form.get('Email').value;
     this.patient.password=this.form.get('Password').value;
@@ -61,8 +61,9 @@ export class RegisterComponent implements OnInit {
     this.patient.score=0;
     this._service.registerPatientFromRemote(this.patient).subscribe(
       data => {
+        sessionStorage.setItem('email',email);
         localStorage.setItem('isConnected', 'true');
-        this._route.navigate(["/Quiz"]);
+        this._route.navigate(["/quiz"]);
     } ,
     
       error =>
