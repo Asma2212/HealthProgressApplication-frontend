@@ -8,12 +8,14 @@ import { Routes, RouterModule } from '@angular/router';
 import { ProfilGuard } from './profil.guard';
 import { QuizComponent } from './quiz/quiz.component';
 import { AdminComponent } from './admin/admin.component';
+import { QuizzGuard } from './quizz.guard';
+import { AdminGuard } from './admin.guard';
 import { ExerciceComponent } from './exercice/exercice.component';
 
 const routes: Routes = [
   {path:'',component:HomeComponent},
-  {path:'quiz',component:QuizComponent},
-  {path:'admin',component:AdminComponent},
+  {path:'quiz',component:QuizComponent ,canActivate: [QuizzGuard]},
+  {path:'admin',component:AdminComponent,canActivate:[AdminGuard]},
   {path:'login',component:LoginComponent },
   {path:'profil',component:ProfilComponent , canActivate:[ProfilGuard]},
   {path:'register',component:RegisterComponent},

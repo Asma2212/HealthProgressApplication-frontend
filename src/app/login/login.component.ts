@@ -37,6 +37,10 @@ sessionValue : string ="";
   }
 
   loginPatient(email : string ){
+    if (email === 'admin@g.c') {
+      localStorage.setItem('AdminConnected', 'true');
+      this._route.navigate(["/admin"])
+    }
 this._service.loginPatientFromRemote(this.patient).subscribe(
   data => {
     sessionStorage.setItem('email',email);
@@ -47,7 +51,7 @@ this._service.loginPatientFromRemote(this.patient).subscribe(
     this._route.navigate(["/profil"])
     this.sessionValue=sessionStorage.getItem("Second");
     this.localValue=localStorage.getItem("FirstName");
-    console.log(this.sessionValue);
+    console.log(this.sessionValue); 
     console.log(this.localValue);
     if(!this.sessionValue )
     {

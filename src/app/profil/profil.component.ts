@@ -42,4 +42,15 @@ export class ProfilComponent implements OnInit {
 show()
 {
   this._route.navigateByUrl('/exercice');
-}}
+}
+Decon ()
+  {
+    
+    localStorage.removeItem('FirstName');
+    localStorage.removeItem('isConnected');
+      this._route.navigateByUrl('/');
+    
+    
+  }
+
+}
