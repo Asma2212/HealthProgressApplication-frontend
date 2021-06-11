@@ -21,4 +21,8 @@ return this._http.post<any>("http://localhost:8085/login",patient);
       public getPatientByEmail(email : string):Observable<any>{
         return this._http.get<any>("http://localhost:8085/findE/"+email);
           }
+          public updatePatient (patient:Patient): Observable <Patient>
+          {
+            return this._http.put<Patient>('http://localhost:8085/update',patient);
+          }
 }

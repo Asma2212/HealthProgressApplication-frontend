@@ -3,6 +3,8 @@ import { Quiz } from '../quiz';
 import { QuizService } from '../quiz.service';
 import { Router } from '@angular/router';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+import { RegistrationService } from '../registration.service';
+import { Patient } from '../patient';
 
 @Component({
   selector: 'app-quiz',
@@ -15,10 +17,11 @@ quizzes: Quiz[]=[];
 currentQuiz =0;
 answerSelected=false;
 res=0;
+patient = new Patient();
 Dependance :string ='';
 result=false;
 closeResult :string= '';
-  constructor(private quizService: QuizService,private router: Router) { }
+  constructor(private quizService: QuizService,private router: Router,private _service :RegistrationService) { }
 
   ngOnInit(): void {
     this.quizzes=this.quizService.getQuizzes();
@@ -66,6 +69,8 @@ Suiv ()
     }
     else 
     {
+      /*this._service.updatePatient(this.patient).subscribe(
+        data => {*/
       this.router.navigateByUrl('/profil');
     }
     
