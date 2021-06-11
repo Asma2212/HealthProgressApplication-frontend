@@ -9,6 +9,11 @@ import { RegistrationService } from '../registration.service';
   styleUrls: ['./profil.component.css']
 })
 export class ProfilComponent implements OnInit {
+  model = {
+    left: true,
+    middle: false,
+    right: false
+  };
   patient = new Patient();
   name='';
   sessionValue : string ="";
@@ -51,6 +56,10 @@ Decon ()
       this._route.navigateByUrl('/');
     
     
+  }
+  Aceuil()
+  {
+    this._route.navigateByUrl('/');
   }
 
 }

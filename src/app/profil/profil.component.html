@@ -1,9 +1,21 @@
 <body>
   <div class="container">
     <h1 style="font-family:Century Schoolbook ">
-      <img style="width: 70px;height: 70px;" src="assets/prof.PNG" alt="...."> WELCOM {{ patient.name }} </h1><button class="btn-primary" style="margin-left: 90%;" class="button" (click)="Decon()">Deconnecter</button>
-    <div class="body">
+      
+      <img style="width: 70px;height: 70px;" src="assets/prof.PNG" alt="...."> WELCOM {{ patient.name }} </h1>
+      <div class="btn-group btn-group-toggle" style="margin-left: 90%;">
+        
+        <label class="btn-primary" ngbButtonLabel>
+          <input type="checkbox" ngbButton [(ngModel)]="model.middle" (click)="Aceuil()"> Acceuil
+        </label>
+        <label class="btn-primary" ngbButtonLabel>
+          <input type="checkbox" ngbButton [(ngModel)]="model.right" (click)="Decon()"> Deconnecter
+        </label>
+      </div>
+      <br>
+     <div class="body" style="padding: 3%;">
       <div class="row">
+        
           <div class="col">
             <div class="card" style="width: 18rem;">
               <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">

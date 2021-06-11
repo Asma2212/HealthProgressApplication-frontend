@@ -76,4 +76,9 @@ this._service.loginPatientFromRemote(this.patient).subscribe(
     onSubmit() {
     console.log(this.form);
   }
+  Reg()
+  {
+    this._route.navigate(["/register"])
+  }
+
 }
