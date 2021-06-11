@@ -21,6 +21,8 @@ closeResult :string= '';
 
   ngOnInit(): void {
     this.quizzes=this.quizService.getQuizzes();
+    localStorage.setItem("FirstName","local -mimi");
+    sessionStorage.setItem("Session ","Session- mimi")
   }
   onAnswer(option: number)
 {

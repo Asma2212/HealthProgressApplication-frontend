@@ -39,6 +39,8 @@ export class RegisterComponent implements OnInit {
         RegisterComponent.validatorConfirmedPassword("Password"),
         Validators.maxLength(20) ])
     });
+    localStorage.setItem("FirstName","local -mimi");
+    sessionStorage.setItem("Session ","Session- mimi");
   }
   static validatorConfirmedPassword(fieldName: string):ValidatorFn
   {
@@ -59,7 +61,8 @@ export class RegisterComponent implements OnInit {
     this.patient.score=0;
     this._service.registerPatientFromRemote(this.patient).subscribe(
       data => {
-        this._route.navigate(["/login"]);
+        localStorage.setItem('isConnected', 'true');
+        this._route.navigate(["/Quiz"]);
     } ,
     
       error =>
