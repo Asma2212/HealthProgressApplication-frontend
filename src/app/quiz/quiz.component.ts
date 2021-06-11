@@ -10,6 +10,7 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./quiz.component.css']
 })
 export class QuizComponent implements OnInit {
+  images = ['http://macfarlaneparkpta.org/index.cfm?a=Files.Serve&File_id=C9B82FD0-41D5-4C06-B08F-CFC0AA2374C5', 'https://wallpapercave.com/wp/wp1828782.jpg'];
 quizzes: Quiz[]=[];
 currentQuiz =0;
 answerSelected=false;
