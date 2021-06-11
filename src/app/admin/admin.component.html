@@ -64,9 +64,6 @@
              <div class="col">
                 <div class="pad" style="padding-top: 45%;">
                   <h3>liste de nos patients</h3>
-                  <div *ngFor="let patient of patients">
-                   <div>{{patient.name}}</div>
-                  </div>
                   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
                   <div class="container bootstrap snippets bootdey">
                       <div class="row">
@@ -83,7 +80,8 @@
                               </div>
                           </div>
                       </div>
-                      
+                      <div *ngFor="let patient of patients">
+                        <div>{{patient.name}}</div>
                       <div class="row" style="padding: 5%;">
                           <div class="col-sm-6">
                               <div class="panel">
@@ -101,8 +99,8 @@
                                               </a>
                                           </div>
                                           <div class="info">
-                                              <h4>Jonathan Smith</h4>
-                                              <p class="text-muted">Graphics Designer</p>
+                                              <h4>{{patient.name}}</h4>
+                                              <p class="text-muted">{{patient.score}}</p>
                                           </div>
                                       </div>
                                       <div class="clearfix"></div>
@@ -116,171 +114,10 @@
                                   </div>
                               </div>
                           </div>
-                  
+                        </div>
                           
-                          <div class="col-sm-6">
-                              <div class="panel">
-                                  <div class="panel-body p-t-10">
-                                      <div class="media-main">
-                                          <a class="pull-left" href="#">
-                                              <img class="thumb-lg img-circle bx-s" src="https://bootdey.com/img/Content/user_2.jpg" alt="">
-                                          </a>
-                                          <div class="pull-right btn-group-sm">
-                                              <a href="#" class="btn btn-success tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Edit">
-                                                  <i class="fa fa-pencil"></i>
-                                              </a>
-                                              <a href="#" class="btn btn-danger tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Delete">
-                                                  <i class="fa fa-close"></i>
-                                              </a>
-                                          </div>
-                                          <div class="info">
-                                              <h4>Jonathan Smith</h4>
-                                              <p class="text-muted">Graphics Designer</p>
-                                          </div>
-                                      </div>
-                                      <div class="clearfix"></div>
-                                      <hr>
-                                      <ul class="social-links list-inline p-b-10">
-                                          
-                                          <li>
-                                              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Message"><i class="fa fa-envelope-o"></i></a>
-                                          </li>
-                                      </ul>
-                                  </div>
-                              </div>
-                          </div>
                   
                   
-                          <div class="col-sm-6">
-                              <div class="panel">
-                                  <div class="panel-body p-t-10">
-                                      <div class="media-main">
-                                          <a class="pull-left" href="#">
-                                              <img class="thumb-lg img-circle bx-s" src="https://bootdey.com/img/Content/user_3.jpg" alt="">
-                                          </a>
-                                          <div class="pull-right btn-group-sm">
-                                              <a href="#" class="btn btn-success tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Edit">
-                                                  <i class="fa fa-pencil"></i>
-                                              </a>
-                                              <a href="#" class="btn btn-danger tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Delete">
-                                                  <i class="fa fa-close"></i>
-                                              </a>
-                                          </div>
-                                          <div class="info">
-                                              <h4>Jonathan Smith</h4>
-                                              <p class="text-muted">Graphics Designer</p>
-                                          </div>
-                                      </div>
-                                      <div class="clearfix"></div>
-                                      <hr>
-                                      <ul class="social-links list-inline p-b-10">
-                                          
-                                          <li>
-                                              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Message"><i class="fa fa-envelope-o"></i></a>
-                                          </li>
-                                      </ul>
-                                  </div>
-                              </div>
-                          </div>
-                  
-                  
-                          <div class="col-sm-6">
-                              <div class="panel">
-                                  <div class="panel-body p-t-10">
-                                      <div class="media-main">
-                                          <a class="pull-left" href="#">
-                                              <img class="thumb-lg img-circle bx-s" src="https://bootdey.com/img/Content/user_1.jpg" alt="">
-                                          </a>
-                                          <div class="pull-right btn-group-sm">
-                                              <a href="#" class="btn btn-success tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Edit">
-                                                  <i class="fa fa-pencil"></i>
-                                              </a>
-                                              <a href="#" class="btn btn-danger tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Delete">
-                                                  <i class="fa fa-close"></i>
-                                              </a>
-                                          </div>
-                                          <div class="info">
-                                              <h4>Jonathan Smith</h4>
-                                              <p class="text-muted">Graphics Designer</p>
-                                          </div>
-                                      </div>
-                                      <div class="clearfix"></div>
-                                      <hr>
-                                      <ul class="social-links list-inline p-b-10">
-                                          
-                                          <li>
-                                              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Message"><i class="fa fa-envelope-o"></i></a>
-                                          </li>
-                                      </ul>
-                                  </div>
-                              </div>
-                          </div>
-                  
-                  
-                          <div class="col-sm-6">
-                              <div class="panel">
-                                  <div class="panel-body p-t-10">
-                                      <div class="media-main">
-                                          <a class="pull-left" href="#">
-                                              <img class="thumb-lg img-circle bx-s" src="https://bootdey.com/img/Content/user_2.jpg" alt="">
-                                          </a>
-                                          <div class="pull-right btn-group-sm">
-                                              <a href="#" class="btn btn-success tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Edit">
-                                                  <i class="fa fa-pencil"></i>
-                                              </a>
-                                              <a href="#" class="btn btn-danger tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Delete">
-                                                  <i class="fa fa-close"></i>
-                                              </a>
-                                          </div>
-                                          <div class="info">
-                                              <h4>Jonathan Smith</h4>
-                                              <p class="text-muted">Graphics Designer</p>
-                                          </div>
-                                      </div>
-                                      <div class="clearfix"></div>
-                                      <hr>
-                                      <ul class="social-links list-inline p-b-10">
-                                          
-                                          <li>
-                                              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Message"><i class="fa fa-envelope-o"></i></a>
-                                          </li>
-                                      </ul>
-                                  </div>
-                              </div>
-                          </div>
-                  
-                  
-                          <div class="col-sm-6">
-                              <div class="panel">
-                                  <div class="panel-body p-t-10">
-                                      <div class="media-main">
-                                          <a class="pull-left" href="#">
-                                              <img class="thumb-lg img-circle bx-s" src="https://bootdey.com/img/Content/user_3.jpg" alt="">
-                                          </a>
-                                          <div class="pull-right btn-group-sm">
-                                              <a href="#" class="btn btn-success tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Edit">
-                                                  <i class="fa fa-pencil"></i>
-                                              </a>
-                                              <a href="#" class="btn btn-danger tooltips" data-placement="top" data-toggle="tooltip" data-original-title="Delete">
-                                                  <i class="fa fa-close"></i>
-                                              </a>
-                                          </div>
-                                          <div class="info">
-                                              <h4>Jonathan Smith</h4>
-                                              <p class="text-muted">Graphics Designer</p>
-                                          </div>
-                                      </div>
-                                      <div class="clearfix"></div>
-                                      <hr>
-                                      <ul class="social-links list-inline p-b-10">
-                                          
-                                          <li>
-                                              <a title="" data-placement="top" data-toggle="tooltip" class="tooltips" href="#" data-original-title="Message"><i class="fa fa-envelope-o"></i></a>
-                                          </li>
-                                      </ul>
-                                  </div>
-                              </div>
-                          </div>
                       </div>
                   </div>                                                                  
 
