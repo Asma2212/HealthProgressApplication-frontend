@@ -7,10 +7,9 @@ import { exercices } from './exercice';
   providedIn: 'root'
 })
 export class ExerciceService {
-
   constructor(private http:HttpClient) {}
     public getAllExercices():Observable<exercices[]>{
-      return this.http.get<exercices[]>("http://localhost:8085/exercices");
+      return this.http.get<exercices[]>("http://localhost:8085/exercice");
     }
   }
 
