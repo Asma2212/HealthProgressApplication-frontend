@@ -1,16 +1,15 @@
 <body>
 
-  <div class="container">
-    <header>
-      <h1 style="text-align: center;color:black;font-family:Vladimir Script"><img src="assets/logo.png" alt=""
-          style="width: 100px;height: 100px;"> Health Progress <span><a routerLink="login" class="button">Connect
-            Now</a><a routerLink="register" class="button">Join us</a></span></h1>
-    </header>
+    <div class="container">
+        <header>
+            <h1 style="text-align: center;color:black;font-family:Vladimir Script"><img src="assets/logo.png" alt="" style="width: 100px;height: 100px;"> Health Progress <span><a routerLink="login" class="button">Connecter
+           </a><a routerLink="register" class="button">Enregistrer</a></span></h1>
+        </header>
 
-    <!--<h2 style="text-align: center;color:black;font-family:Blackadder ITC;"><span style="font-family:Blackadder ITC;">Try , Believe and</span>  Make it happen</h2>
+        <!--<h2 style="text-align: center;color:black;font-family:Blackadder ITC;"><span style="font-family:Blackadder ITC;">Try , Believe and</span>  Make it happen</h2>
 
 -->
-    <!--<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+        <!--<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
       <img src="http://macfarlaneparkpta.org/index.cfm?a=Files.Serve&File_id=C9B82FD0-41D5-4C06-B08F-CFC0AA2374C5" style="height:300px;width: 500px;" class="d-block w-100" alt="">
@@ -26,140 +25,130 @@
 -->
 
 
-    <section>
+        <section>
 
-      <ngb-carousel *ngIf="images">
-        <ng-template ngbSlide>
-          <div class="picsum-img-wrapper">
-            <img [src]="images[0]" style="height:300px;width: 500px;" class="d-block w-100">
-          </div>
-          <div class="carousel-caption">
+            <ngb-carousel *ngIf="images">
+                <ng-template ngbSlide>
+                    <div class="picsum-img-wrapper">
+                        <img [src]="images[0]" style="height:300px;width: 500px;" class="d-block w-100">
+                    </div>
+                    <div class="carousel-caption">
 
-          </div>
-        </ng-template>
-        <ng-template ngbSlide>
-          <div class="picsum-img-wrapper">
-            <img [src]="images[1]" style="height:300px;width: 500px;" class="d-block w-100">
-          </div>
+                    </div>
+                </ng-template>
+                <ng-template ngbSlide>
+                    <div class="picsum-img-wrapper">
+                        <img [src]="images[1]" style="height:300px;width: 500px;" class="d-block w-100">
+                    </div>
 
-        </ng-template>
+                </ng-template>
 
-      </ngb-carousel>
+            </ngb-carousel>
 
 
-      <br><br>
-      <h3 style="text-align: center;"><strong> Bienvenue dans notre application Health Progress, Cette application
+            <br><br>
+            <h3 style="text-align: center;"><strong> Bienvenue dans notre application Health Progress, Cette application
           concerne la santé physique et spirituelle de l'Homme.</strong></h3>
-      <div class="wrapper">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6 col-lg-4">
-              <div class="card mx-30">
-                <img class="card-img-top" src="assets/doctors.png" alt="Doctors">
-                <div class="card-body">
-                  <h5 class="card-title">Docteurs</h5>
-                  <h6>
-                    Santé du corps</h6>
-                  <p class="card-text">Vous trouverez dans cette application des médecins prêts à vous accompagner vers
-                    une vie meilleure </p>
+            <div class="wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card mx-30">
+                                <img class="card-img-top" src="assets/doctors.png" alt="Doctors">
+                                <div class="card-body">
+                                    <h5 class="card-title">Docteurs</h5>
+                                    <h6>
+                                        Santé du corps</h6>
+                                    <p class="card-text">Vous trouverez dans cette application des médecins prêts à vous accompagner vers une vie meilleure </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card mx-30">
+                                <img class="card-img-top" src="assets/tasksAll.png" alt="Card image cap">
+                                <div class="card-body">
+                                    <h5 class="card-title">
+                                        Tâches</h5>
+                                    <h6>
+                                        De nombreuses tâches qui rendent votre vie meilleure
+                                    </h6>
+                                    <p class="card-text">
+                                        Statistiques de travail<br> Votre liste de tâches préférées<br> Tâches que vous avez effectuées et que vous n'avez pas effectuées</p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card mx-30">
+                                <img class="card-img-top" src="assets/med-removebg-preview.png" alt="Meditation">
+                                <div class="card-body">
+                                    <h5 class="card-title">Santé de l'esprit</h5>
+                                    <h6>Meditation </h6>
+                                    <p class="card-text">
+
+                                        <p class="card-text">Prendre quelques minutes pour se concentrer chaque jour peut réduire le stress, la douleur, la dépression et plus encore</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-            <div class="col-md-6 col-lg-4">
-              <div class="card mx-30">
-                <img class="card-img-top" src="assets/tasksAll.png" alt="Card image cap">
-                <div class="card-body">
-                  <h5 class="card-title">
-                    Tâches</h5>
-                  <h6>
-                    De nombreuses tâches qui rendent votre vie meilleure
-                  </h6>
-                  <p class="card-text">
-                    Statistiques de travail<br>
-                    Votre liste de tâches préférées<br>
-                    Tâches que vous avez effectuées et que vous n'avez pas effectuées</p>
+            <!--_________________________________________________________Card2____________________________________________________________________ -->
+            <!--___________________________________________________________________________________________________________________________________-->
 
+            <div class="wrapper">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card mx-30">
+                                <img class="card-img-top" src="assets/ciguarette.jpg" alt="Smoke" style="height: 350px; width:350px">
+                                <div class="card-body">
+                                    <h5 class="card-title">Fumer </h5>
+                                    <h6>
+                                        Santé du corps</h6>
+                                    <p class="card-text">Vous trouverez un test international qui vous indique le stade de votre addiction, et nous vous proposerons des activités pour arrêter de fumer & préserver votre santé corporelle
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card mx-30">
+                                <img class="card-img-top" src="assets/call-removebg-preview.png" style="height: 350px; width:350px" alt="Calendar">
+                                <div class="card-body">
+                                    <h5 class="card-title">Calendrier</h5>
+                                    <h6>
+                                        De nombreuses tâches qui rendent votre vie meilleure
+                                    </h6>
+                                    <p class="card-text">
+                                        Statistiques de travail<br> Votre liste de tâches préférées<br> Tâches que vous avez effectuées et que vous n'avez pas effectuées</p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4">
+                            <div class="card mx-30">
+                                <img class="card-img-top" src="assets/alcool.png" style="height: 350px; width:350px" alt="Alcool">
+                                <div class="card-body">
+                                    <h5 class="card-title">Alcool</h5>
+                                    <h6>Santé du corps</h6>
+                                    <p class="card-text">
+
+                                        <p class="card-text">L'alcool peut détruire votre esprit et votre santé, vous trouverez chez nous quelques conseils, activités, des médecins qui vous accompagneront pour avoir un corps sain & un esprit sain</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
             </div>
-            <div class="col-md-6 col-lg-4">
-              <div class="card mx-30">
-                <img class="card-img-top" src="assets/med-removebg-preview.png" alt="Meditation">
-                <div class="card-body">
-                  <h5 class="card-title">Santé de l'esprit</h5>
-                  <h6>Meditation </h6>
-                  <p class="card-text">
 
-                  <p class="card-text">Prendre quelques minutes pour se concentrer chaque jour peut réduire le stress,
-                    la douleur, la dépression et plus encore</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--_________________________________________________________Card2____________________________________________________________________ -->
-      <!--___________________________________________________________________________________________________________________________________-->
-
-      <div class="wrapper">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6 col-lg-4">
-              <div class="card mx-30">
-                <img class="card-img-top" src="assets/ciguarette.jpg" alt="Smoke" style="height: 350px; width:350px">
-                <div class="card-body">
-                  <h5 class="card-title">Fumer </h5>
-                  <h6>
-                    Santé du corps</h6>
-                  <p class="card-text">Vous trouverez un test international qui vous indique le stade de votre
-                    addiction, et nous vous proposerons des activités pour arrêter de fumer & préserver votre santé
-                    corporelle
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <div class="card mx-30">
-                <img class="card-img-top" src="assets/call-removebg-preview.png" style="height: 350px; width:350px"
-                  alt="Calendar">
-                <div class="card-body">
-                  <h5 class="card-title">Calendrier</h5>
-                  <h6>
-                    De nombreuses tâches qui rendent votre vie meilleure
-                  </h6>
-                  <p class="card-text">
-                    Statistiques de travail<br>
-                    Votre liste de tâches préférées<br>
-                    Tâches que vous avez effectuées et que vous n'avez pas effectuées</p>
-
-                </div>
-              </div>
-            </div>
-            <div class="col-md-6 col-lg-4">
-              <div class="card mx-30">
-                <img class="card-img-top" src="assets/alcool.png" style="height: 350px; width:350px" alt="Alcool">
-                <div class="card-body">
-                  <h5 class="card-title">Alcool</h5>
-                  <h6>Santé du corps</h6>
-                  <p class="card-text">
-
-                  <p class="card-text">L'alcool peut détruire votre esprit et votre santé, vous trouverez chez nous quelques conseils,
-                    activités, des médecins qui vous accompagneront pour avoir un corps sain & un esprit sain</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </section>
+        </section>
 
 
 
 
 
 
-    <!--  __________________________________version 1 _____________________________________________
+        <!--  __________________________________version 1 _____________________________________________
 <br><br><br><br><br><br><br>
 <div class="uk-column-1-2 uk-column-divider"><br><br><br>
   <p style="font-weight: bolder;text-align:center;">You'll find doctors on this page who are willing to accompany you to a better life here</p>
@@ -196,5 +185,5 @@
 
 <img src="assets/source.gif" alt="" style="height: 300px; width: 300px;">
 </div>-->
-  </div>
+    </div>
 </body>

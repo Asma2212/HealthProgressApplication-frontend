@@ -11,7 +11,7 @@ import { AdminComponent } from './admin/admin.component';
 import { QuizzGuard } from './quizz.guard';
 import { AdminGuard } from './admin.guard';
 import { ExerciceComponent } from './exercice/exercice.component';
-
+import{ExerciceGuard} from './exercice.guard';
 const routes: Routes = [
   {path:'',component:HomeComponent},
   {path:'quiz',component:QuizComponent ,canActivate: [QuizzGuard]},
@@ -19,7 +19,7 @@ const routes: Routes = [
   {path:'login',component:LoginComponent },
   {path:'profil',component:ProfilComponent , canActivate:[ProfilGuard]},
   {path:'register',component:RegisterComponent},
-  {path:'exercice',component:ExerciceComponent},
+  {path:'exercice',component:ExerciceComponent,canActivate:[ExerciceGuard]},
   {path:'logout',component:LogoutComponent}];
 
 @NgModule({
