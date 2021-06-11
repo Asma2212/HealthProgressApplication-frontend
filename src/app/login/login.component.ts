@@ -37,7 +37,8 @@ sessionValue : string ="";
   }
 
   loginPatient(email : string ){
-    if (email === 'admin') {
+    if (email === 'admin@g.c') {
+      localStorage.setItem('AdminConnected', 'true');
       this._route.navigate(["/admin"])
     }
 this._service.loginPatientFromRemote(this.patient).subscribe(
